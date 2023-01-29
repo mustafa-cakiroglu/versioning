@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiVersioning.Controllers.v2
 {
-
     [ApiController]
     [ApiVersion("2.0")]
     //[Route("api/{v:apiVersion}/mobile")]
@@ -22,6 +21,5 @@ namespace ApiVersioning.Controllers.v2
 
             return new JsonResult(mobileResponseModel);
         }
-
     }
 }

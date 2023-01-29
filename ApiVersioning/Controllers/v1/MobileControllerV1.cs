@@ -15,7 +15,6 @@ namespace ApiVersioning.Controllers.v1
         [HttpGet("getdata/{key}")]
         public async Task<JsonResult> Get(string key)
         {
-
             var mobileResponseModel = new MobileResponseModel();
             mobileResponseModel.HttpStatusCode = HttpStatusCode.OK;
             mobileResponseModel.IsSuccess = true;
@@ -28,18 +27,11 @@ namespace ApiVersioning.Controllers.v1
         [Route("createtemplate")]
         public async Task<JsonResult> CreateTemplate(TemplateModel templateModel)
         {
-
             var mobileResponseModel = new MobileResponseModel();
             mobileResponseModel.HttpStatusCode = HttpStatusCode.Created;
             mobileResponseModel.IsSuccess = true;
 
             return new JsonResult(mobileResponseModel);
         }
-
-
-    }
-    public class TemplateModel
-    {
-        public string TemplateName { get; set; }
     }
 }
